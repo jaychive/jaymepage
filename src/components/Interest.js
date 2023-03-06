@@ -5,7 +5,7 @@ import Hobby from './reusable/Hobby';
 function Interest(props) {
   return (
     <>
-      <section id="interest" className="fullcontainer">
+      <section id="interest" className="">
         <Hobby name="" />
         <Hobby name="" />
         <Hobby name="" />

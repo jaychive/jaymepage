@@ -1,21 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {margin: 0; padding: 0;}
+body {background-color: #F7FEFF;}
 ul, li {list-style: none;}
 a, a:hover {color: black; text-decoration: none;}
+section {padding-top: 100px;}
 
 // 공통클래스
-.fullcontainer{width: 1790px;}
+.fullcontainer
+{
+  min-width: 320px;
+@media (min-width:32rem) {
+  // 512px 이상
+  
+}
+@media (min-width:64rem) {
+  // 1024px 이상
+  
+}
+}
+
+.bg-jay {background-color: #F7FEFF;}
+.h100vh {height: 100vh;}
+.isolate {isolation: isolate;}
+
+.pretendard {font-family: 'Pretendard';}
+.lexend {font-family: 'Lexend';}
+.playfair {font-family: 'Playfair Display';}
 
 // 컴포넌트별
 #header {
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 997;
+  filter: invert(100%);
+  mix-blend-mode: difference;
+  opacity: 1;
+  .menu {
+    h1, button {
+      z-index: 999;
+    }
+    .gnbdown {
+      top: -100vh !important;
+      transition: 0.5s;
+      background-color: black;
+      filter: invert(0%);
+      mix-blend-mode: normal;
+    }
+  }
+  &.down {
+    .menu .gnbdown {
+      top: 0 !important;
+    }
+    svg {
+      path{
+        fill : white
+      }
+      line {
+        stroke: white;
+      }
+    }
+  }
 }
 
 #menu {
-  
+  a {
+    color: white;
+  }
+  .closeMenu {
+    color: white;
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+  }
 }
 
 #main {
-
+  .maindrawing {
+    top: 100%;
+    left: 50%;
+    width: 75%;
+    transform: translateX(-75%);
+  }
 }
 
 #about {

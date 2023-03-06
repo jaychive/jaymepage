@@ -5,11 +5,12 @@ function Hobby(props) {
     <>
       <div className="hobbyline">
         <strong className="hobTitle">{props.name}</strong>
-        <img src="" alt="open" className="d-block"><a href="" onClick="여기에 useState 들어있는 콜백함수 실행"></a></img>
+        {/* <img src="" alt="open" className="d-block"><button>onClick="여기에 useState 들어있는 콜백함수 실행"</button></img> */}
         <div className="hobbyContent">
-          {/* 그럼 여기에 useState 변수 넣어주기 */}
-          <p></p>
-          <img src="여기다가 {useState 변수}" alt="" />
+          {/* 그럼 여기에 useState 변수로 설명 넣어주기 */}
+          <p>설명설명</p>
+          {/* <img src="" alt="" /> */}
+          {/* src안에다가 {useState 변수} */}
         </div>
       </div>
     </>
