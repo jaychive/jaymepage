@@ -5,51 +5,65 @@ import { TfiPlus } from "react-icons/tfi";
 
 function About(props) {
 
-  function First (){
-    <div>
-      답변들!!!!
-    </div>
+  function First() {
+    return (
+      <p>
+        답변1
+      </p>
+    )
   }
-  function Second (){
-    <div>
-      답변들!!!!
-    </div>
+  function Second() {
+    return (
+      <p>
+        답변2
+      </p>
+    )
   }
-  function Third (){
-    <div>
-      답변들!!!!
-    </div>
+  function Third() {
+    return (
+      <p>
+        답변3
+      </p>
+    )
   }
-  function Fourth (){
-    <div>
-      답변들!!!!
-    </div>
+  function Fourth() {
+    return (
+      <p>
+        답변4
+      </p>
+    )
   }
-  function Fifth (){
-    <div>
-      답변들!!!!
-    </div>
+  function Fifth() {
+    return (
+      <p>
+        답변5
+      </p>
+    )
   }
 
-  const [answer, setAnswer] = useState('');
+  const [isActive, setIsActive] = useState(false);
 
-  const answerComponent = {
-    first: <First />,
-    second: <Second />,
-    third: <Third />,
-    fourth: <Fourth />,
-    fifth: <Fifth />
-  }
+  const [answer, setAnswer] = useState([]);
 
-  const interviewclick = (e)=>{
-    const { name } = e.target.parentNode;
-    setAnswer(name);
+  const answerComponent = [
+    {id: "first", first: <First />},
+    {id: "second", second: <Second />},
+    {id: "third", third: <Third />},
+    {id: "fourth", fourth: <Fourth />},
+    {id: "fifth", fifth: <Fifth />}
+  ]
+
+  const interviewclick = (e) => {
+    const $name = e.target.parentNode.name;
+
+    // !answer.includes()
   }
   return (
     <>
       <section id="about" className="">
-        <div className="title py-3">
+        <div className="title my-3 position-relative">
           <h2 className="playfair text-5xl italic d-flex justify-content-start ps-3">ABOUT</h2>
+          <img className="position-absolute top-0 w-3" src="/img/sub/sub03.svg" alt="" />
         </div>
         <div className="descMe d-flex flex-column pt-3">
           <div>
@@ -108,41 +122,60 @@ function About(props) {
         <div className="interview">
           <h3 className="playfair text-4xl italic d-flex justify-content-center ps-3 pt-5 pb-3">INTERVIEW</h3>
           <div className="qna">
-            <div className="qa1">
-              <div className="ques">
+            radio 버튼으로 만들어서 checked 여부로 오픈할지 안 할지 나누는 걸로 만드는 것도 괜찮을듯
+            {
+              answerComponent.map((value, index) => {
+                return (
+                  <div className={`qa${index+1}`} key={value.id}>
+                    <div className="ques d-flex justify-content-center text-2xl pretendard">
+                      <p>질문</p>
+                      <button name={value.id} onClick={()=>{
+                        setIsActive(isActive => !isActive);
+                        setAnswer(value[value.id]);
+                      }} className={isActive? 'answerOn' : ''}><TfiPlus /></button>
+                      {}
+                    </div>
+                  </div>
+                )
+              })
+            }
+
+
+            {/* <div className="qa1">
+              <div className="ques d-flex justify-content-center text-2xl pretendard">
                 <p>질문</p>
-                <button name="first" onClick={interviewclick}><TfiPlus /></button>
-                <div>{answer && <div>{answerComponent[answer]}</div>}</div>
+                <button name="first" onClick={interviewclick} className={isActive? 'answerOn' : ''}><TfiPlus /></button>
+                {isActive && answer==='first'?answer && <div>{answerComponent[answer]}</div> : null}
               </div>
             </div>
             <div className="qa2">
-              <div className="ques">
+              <div className="ques d-flex justify-content-center text-2xl pretendard">
                 <p>질문</p>
-                <button name="second"><TfiPlus /></button>
-                <div>{answer && <div>{answerComponent[answer]}</div>}</div>
+                <button name="second"  onClick={interviewclick}><TfiPlus /></button>
+                {isActive && answer==='second'?answer && <div>{answerComponent[answer]}</div> : null}
               </div>
             </div>
             <div className="qa3">
-              <div className="ques">
+              <div className="ques d-flex justify-content-center text-2xl pretendard">
                 <p>질문</p>
-                <button name="third"><TfiPlus /></button>
-                <div>{answer && <div>{answerComponent[answer]}</div>}</div>
+                <button name="third" onClick={interviewclick}><TfiPlus /></button>
+                {answer==='third'?answer && <div>{answerComponent[answer]}</div> : null}
               </div>
             </div>
             <div className="qa4">
-              <div className="ques">
+              <div className="ques d-flex justify-content-center text-2xl pretendard">
                 <p>질문</p>
-                <button name="fourth"><TfiPlus /></button>
-                <div>{answer && <div>{answerComponent[answer]}</div>}</div>
+                <button name="fourth" onClick={interviewclick}><TfiPlus /></button>
+                {answer==='fourth'?answer && <div>{answerComponent[answer]}</div> : null}
               </div>
             </div>
             <div className="qa5">
-              <div className="ques">
+              <div className="ques d-flex justify-content-center text-2xl pretendard">
                 <p>질문</p>
-                <button name="fifth"><TfiPlus /></button>
-                <span>{answer && <div>{answerComponent[answer]}</div>}</span>
+                <button name="fifth" onClick={interviewclick}><TfiPlus /></button>
+                {answer==='fifth'?answer && <div>{answerComponent[answer]}</div> : null}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
