@@ -6,13 +6,13 @@ function Main(props) {
     <>
       <section id="main" className="position-relative ">
         <div className="mainMenu pt-2">
-          <Link to="/about"><p className="pretendard font-light">&lt;ABOUT /&gt;</p></Link>
+          <Link to="/about"><p className="lexend font-light">&lt;ABOUT /&gt;</p></Link>
           <img className="d-block w-4 mx-auto py-3" src="/img/sub/sub02.svg" alt="" />
-          <Link to="/interest"><p className="pretendard font-light">&lt;INTEREST /&gt;</p></Link>
+          <Link to="/interest"><p className="lexend font-light">&lt;INTEREST /&gt;</p></Link>
           <img className="d-block w-4 mx-auto py-3" src="/img/sub/sub02.svg" alt="" />
-          <Link to="/portfolio"><p className="pretendard font-light">&lt;PORTFOLIO /&gt;</p></Link>
+          <Link to="/portfolio"><p className="lexend font-light">&lt;PORTFOLIO /&gt;</p></Link>
           <img className="d-block w-4 mx-auto py-3" src="/img/sub/sub02.svg" alt="" />
-          <Link to="/contact"><p className="pretendard font-light">&lt;CONTACT /&gt;</p></Link>
+          <Link to="/contact"><p className="lexend font-light">&lt;CONTACT /&gt;</p></Link>
         </div>
         <div className="intro">
           <div className="introText">

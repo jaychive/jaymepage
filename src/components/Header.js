@@ -37,9 +37,9 @@ function Header(props) {
             </h1>
             <button onClick={menuclick}>
               <svg width="30" height="10" viewBox="0 0 30 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line y1="1" x2="30" y2="1" stroke="#000" stroke-width="2" />
-                <line y1="5" x2="30" y2="5" stroke="#000" stroke-width="2" />
-                <line y1="9" x2="30" y2="9" stroke="#000" stroke-width="2" />
+                <line y1="1" x2="30" y2="1" stroke="#000" strokeWidth="2" />
+                <line y1="5" x2="30" y2="5" stroke="#000" strokeWidth="2" />
+                <line y1="9" x2="30" y2="9" stroke="#000" strokeWidth="2" />
               </svg>
             </button>
             <div className="gnbdown position-absolute left-0 right-0 h100vh bg-black" >

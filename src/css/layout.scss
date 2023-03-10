@@ -29,6 +29,16 @@ section {padding-top: 100px;}
 .pretendard {font-family: 'Pretendard';}
 .lexend {font-family: 'Lexend';}
 .playfair {font-family: 'Playfair Display';}
+.syncopate {font-family: 'Syncopate';}
+
+.text-stroke {
+  -webkit-text-stroke: 1px #000;
+}
+
+.squareBtn:hover {
+  background-color: rgb(44, 44, 44);
+  color: white;
+}
 
 // 컴포넌트별
 #header {
@@ -81,8 +91,14 @@ section {padding-top: 100px;}
 }
 
 #main {
+  height: 100vh;
+  overflow: hidden;
+  .mainMenu {
+    position: relative;
+    z-index: 999;
+  }
   .maindrawing {
-    top: 100%;
+    top: 48%;
     left: 50%;
     width: 75%;
     transform: translateX(-75%);

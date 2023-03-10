@@ -4,7 +4,7 @@ function Form(props) {
   return (
     <>
       <section id="form">
-        <h2>CONTACT</h2>
+        <h2 className="lexend text-3xl font-bold">CONTACT</h2>
         <img src="" alt="" className="d-block" />
         {/* 리액트 폼 훅으로 mui로 만들기*/}
       </section>

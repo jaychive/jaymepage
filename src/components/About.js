@@ -1,63 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Gauge from './reusable/Gauge';
-import { TfiPlus } from "react-icons/tfi";
+import Interview from './reusable/Interview';
 
 function About(props) {
 
-  function First() {
-    return (
-      <p>
-        답변1
-      </p>
-    )
-  }
-  function Second() {
-    return (
-      <p>
-        답변2
-      </p>
-    )
-  }
-  function Third() {
-    return (
-      <p>
-        답변3
-      </p>
-    )
-  }
-  function Fourth() {
-    return (
-      <p>
-        답변4
-      </p>
-    )
-  }
-  function Fifth() {
-    return (
-      <p>
-        답변5
-      </p>
-    )
-  }
-
-  const [isActive, setIsActive] = useState(false);
-
-  const [answer, setAnswer] = useState([]);
-
-  const answerComponent = [
-    {id: "first", first: <First />},
-    {id: "second", second: <Second />},
-    {id: "third", third: <Third />},
-    {id: "fourth", fourth: <Fourth />},
-    {id: "fifth", fifth: <Fifth />}
-  ]
-
-  const interviewclick = (e) => {
-    const $name = e.target.parentNode.name;
-
-    // !answer.includes()
-  }
   return (
     <>
       <section id="about" className="">
@@ -121,61 +68,12 @@ function About(props) {
         </div>
         <div className="interview">
           <h3 className="playfair text-4xl italic d-flex justify-content-center ps-3 pt-5 pb-3">INTERVIEW</h3>
-          <div className="qna">
-            radio 버튼으로 만들어서 checked 여부로 오픈할지 안 할지 나누는 걸로 만드는 것도 괜찮을듯
-            {
-              answerComponent.map((value, index) => {
-                return (
-                  <div className={`qa${index+1}`} key={value.id}>
-                    <div className="ques d-flex justify-content-center text-2xl pretendard">
-                      <p>질문</p>
-                      <button name={value.id} onClick={()=>{
-                        setIsActive(isActive => !isActive);
-                        setAnswer(value[value.id]);
-                      }} className={isActive? 'answerOn' : ''}><TfiPlus /></button>
-                      {}
-                    </div>
-                  </div>
-                )
-              })
-            }
-
-
-            {/* <div className="qa1">
-              <div className="ques d-flex justify-content-center text-2xl pretendard">
-                <p>질문</p>
-                <button name="first" onClick={interviewclick} className={isActive? 'answerOn' : ''}><TfiPlus /></button>
-                {isActive && answer==='first'?answer && <div>{answerComponent[answer]}</div> : null}
-              </div>
-            </div>
-            <div className="qa2">
-              <div className="ques d-flex justify-content-center text-2xl pretendard">
-                <p>질문</p>
-                <button name="second"  onClick={interviewclick}><TfiPlus /></button>
-                {isActive && answer==='second'?answer && <div>{answerComponent[answer]}</div> : null}
-              </div>
-            </div>
-            <div className="qa3">
-              <div className="ques d-flex justify-content-center text-2xl pretendard">
-                <p>질문</p>
-                <button name="third" onClick={interviewclick}><TfiPlus /></button>
-                {answer==='third'?answer && <div>{answerComponent[answer]}</div> : null}
-              </div>
-            </div>
-            <div className="qa4">
-              <div className="ques d-flex justify-content-center text-2xl pretendard">
-                <p>질문</p>
-                <button name="fourth" onClick={interviewclick}><TfiPlus /></button>
-                {answer==='fourth'?answer && <div>{answerComponent[answer]}</div> : null}
-              </div>
-            </div>
-            <div className="qa5">
-              <div className="ques d-flex justify-content-center text-2xl pretendard">
-                <p>질문</p>
-                <button name="fifth" onClick={interviewclick}><TfiPlus /></button>
-                {answer==='fifth'?answer && <div>{answerComponent[answer]}</div> : null}
-              </div>
-            </div> */}
+          <div className="qna pt-3">
+            <Interview no="1" border="" />
+            <Interview no="2" border="" />
+            <Interview no="3" border="" />
+            <Interview no="4" border="" />
+            <Interview no="5" border="border-b" />
           </div>
         </div>
       </section>
