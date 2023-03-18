@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+  import { Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Main from './components/Main';
 import About from './components/About';
@@ -11,11 +11,25 @@ import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Menu from './components/Menu';
 import Form from './components/Form';
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom'; 
+
 
 function App() {
+  const location = useLocation();
+
+  // const [color, setColor] = useState('#F7FEFF')
+
+  // const bgColor = ()=>{
+  //   location.pathname === "/contact/me"? setColor('black') : setColor('#F7FEFF')
+  // }
+  // useEffect(()=>{
+  //   bgColor();
+  //   document.querySelector('body').style.backgroundColor = color
+  // },[color])
+  
   return (
     <div className="App fullcontainer">
-      <BrowserRouter>
         <Header />
         <Routes>
           <Route path='/' element={<Main />}></Route>
@@ -28,7 +42,6 @@ function App() {
           <Route path='*' element={<NotFound /> }></Route>
         </Routes>
         <Footer />
-      </BrowserRouter>
     </div>
   );
 }

@@ -2,34 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-* {margin: 0; padding: 0;}
-body {background-color: #F7FEFF;}
-ul, li {list-style: none;}
-a, a:hover {color: black; text-decoration: none;}
-section {padding-top: 100px;}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #F7FEFF;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a,
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+section {
+  padding-top: 100px;
+}
 
 // 공통클래스
-.fullcontainer
-{
+.fullcontainer {
   min-width: 320px;
-@media (min-width:32rem) {
-  // 512px 이상
-  
-}
-@media (min-width:64rem) {
-  // 1024px 이상
-  
-}
+
+  @media (min-width:32rem) {
+    // 512px 이상
+
+  }
+
+  @media (min-width:64rem) {
+    // 1024px 이상
+
+  }
 }
 
-.bg-jay {background-color: #F7FEFF;}
-.h100vh {height: 100vh;}
-.isolate {isolation: isolate;}
+.bg-jay {
+  background-color: #F7FEFF;
+}
 
-.pretendard {font-family: 'Pretendard';}
-.lexend {font-family: 'Lexend';}
-.playfair {font-family: 'Playfair Display';}
-.syncopate {font-family: 'Syncopate';}
+.h100vh {
+  height: 100vh;
+}
+
+.isolate {
+  isolation: isolate;
+}
+
+.pretendard {
+  font-family: 'Pretendard';
+}
+
+.lexend {
+  font-family: 'Lexend';
+}
+
+.playfair {
+  font-family: 'Playfair Display';
+}
+
+.syncopate {
+  font-family: 'Syncopate';
+}
 
 .text-stroke {
   -webkit-text-stroke: 1px #000;
@@ -50,10 +88,14 @@ section {padding-top: 100px;}
   filter: invert(100%);
   mix-blend-mode: difference;
   opacity: 1;
+
   .menu {
-    h1, button {
+
+    h1,
+    button {
       z-index: 999;
     }
+
     .gnbdown {
       top: -100vh !important;
       transition: 0.5s;
@@ -62,14 +104,17 @@ section {padding-top: 100px;}
       mix-blend-mode: normal;
     }
   }
+
   &.down {
     .menu .gnbdown {
       top: 0 !important;
     }
+
     svg {
-      path{
-        fill : white
+      path {
+        fill: white
       }
+
       line {
         stroke: white;
       }
@@ -81,6 +126,7 @@ section {padding-top: 100px;}
   a {
     color: white;
   }
+
   .closeMenu {
     color: white;
     top: 18%;
@@ -93,10 +139,12 @@ section {padding-top: 100px;}
 #main {
   height: 100vh;
   overflow: hidden;
+
   .mainMenu {
     position: relative;
     z-index: 999;
   }
+
   .maindrawing {
     top: 48%;
     left: 50%;
@@ -111,29 +159,63 @@ section {padding-top: 100px;}
       left: 60%;
     }
   }
+
   .gauge {
     .gaugeline {
       background-color: #D9D9D9;
+
       .ggpercent {
         background-color: #000;
       }
     }
   }
-  
-}
-
-#interest {
 
 }
 
-#portfolio {
+#interest {}
 
-}
+#portfolio {}
 
 #contact {
-
+  .ctdetail {
+    .social {
+      .snslink {
+        &:hover {
+          color: #475569;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          height: 1.5px;
+          top: 80%;
+          left: 0;
+          width: 0%;
+          transition: 0.5s;
+          background-color: #475569;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 
-#footer {
-
+#form {
+  .MuiFormGroup-root {
+    .MuiFormControlLabel-root {
+      margin: 0 0.3rem;
+    }
+    .MuiCheckbox-root {
+      padding-top: 0;
+    }
+    .MuiTypography-root {
+      font-family: 'Pretendard';
+      font-size: 0.9rem;
+      line-height: 1;
+      font-weight: 400;
+    } 
+  }
 }
+
+#footer {}

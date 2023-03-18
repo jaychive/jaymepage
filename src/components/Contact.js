@@ -20,22 +20,22 @@ function Contact(props) {
             <img src="/img/sub/sub03.svg" alt="" className="d-block mx-auto w-3 py-5" />
             <div className="social">
               <h4 className="text-lg lexend font-normal mb-3">Social</h4>
-              <div className="">
-                <a href="http://" target="_blank" rel="noopener noreferrer" className="snslink py-1 d-block lexend text-base text-slate-600"><div className="d-flex align-items-center justify-content-center">
+              <div className="w-fit mx-auto">
+                <a href="http://" target="_blank" rel="noopener noreferrer" className="snslink py-1 d-flex justify-content-center align-items-center lexend text-base text-slate-600 w-fit mx-auto position-relative">
                   <span className="me-1">GITHUB</span><FiArrowRight style={{ transform: "rotate(-45deg)" }} />
-                </div></a>
-                <a href="http://" target="_blank" rel="noopener noreferrer" className="snslink py-1 d-block lexend text-base text-slate-600"><div className="d-flex align-items-center justify-content-center">
+                </a>
+                <a href="http://" target="_blank" rel="noopener noreferrer" className="snslink py-1 d-flex justify-content-center align-items-center lexend text-base text-slate-600 w-fit mx-auto position-relative">
                   <span className="me-1">VELOG</span><FiArrowRight style={{ transform: "rotate(-45deg)" }} />
-                </div></a>
-                <a href="http://" target="_blank" rel="noopener noreferrer" className="snslink py-1 d-block lexend text-base text-slate-600"><div className="d-flex align-items-center justify-content-center">
+                </a>
+                <a href="http://" target="_blank" rel="noopener noreferrer" className="snslink py-1 d-flex justify-content-center align-items-center lexend text-base text-slate-600 w-fit mx-auto position-relative">
                   <span className="me-1">NOTION</span><FiArrowRight style={{ transform: "rotate(-45deg)" }} />
-                </div></a>
-                <a href="http://" target="_blank" rel="noopener noreferrer" className="snslink py-1 d-block lexend text-base text-slate-600"><div className="d-flex align-items-center justify-content-center">
+                </a>
+                <a href="http://" target="_blank" rel="noopener noreferrer" className="snslink py-1 d-flex justify-content-center align-items-center lexend text-base text-slate-600 w-fit mx-auto position-relative">
                   <span className="me-1">INSTAGRAM</span><FiArrowRight style={{ transform: "rotate(-45deg)" }} />
-                </div></a>
-                <a href="http://" target="_blank" rel="noopener noreferrer" className="snslink py-1 d-block lexend text-base text-slate-600"><div className="d-flex align-items-center justify-content-center">
+                </a>
+                <a href="http://" target="_blank" rel="noopener noreferrer" className="snslink py-1 d-flex justify-content-center align-items-center lexend text-base text-slate-600 w-fit mx-auto position-relative">
                   <span className="me-1">OPEN KAKAOTALK</span><FiArrowRight style={{ transform: "rotate(-45deg)" }} />
-                </div></a>
+                </a>
               </div>
             </div>
           </div>
