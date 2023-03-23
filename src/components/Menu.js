@@ -12,7 +12,7 @@ function Menu(props) {
   }
   return (
     <>
-      <section id="menu">
+      <section id="menu" className="container">
         <div className="d-flex flex-column justify-content-center position-relative pt-20">
           <Link to="/about" onClick={closeClick} className="text-white py-4"><p className="lexend text-2xl leading-none font-light">&lt;ABOUT /&gt;</p></Link>
           <Link to="/interest" onClick={closeClick} className="text-white py-4"><p className="lexend text-2xl leading-none font-light">&lt;INTEREST /&gt;</p></Link>

@@ -5,7 +5,7 @@ function Gauge(props) {
   return (
     <>
       <div className="gauge d-flex align-items-center justify-content-between px-1">
-        <p className="pretendard font-light break-all ms-auto">{props.name}</p>
+        <p className="pretendard font-light break-all me-auto">{props.name}</p>
         <div className="gug d-flex align-items-center">
           <div className="gaugeline ms-2 h-3 w-52">
             <div className="ggpercent h-3" style={{width : `${props.per}%`}}></div>

@@ -202,6 +202,7 @@ section {
 }
 
 #form {
+  color: white;
   .MuiFormGroup-root {
     .MuiFormControlLabel-root {
       margin: 0 0.3rem;
@@ -214,7 +215,27 @@ section {
       font-size: 0.9rem;
       line-height: 1;
       font-weight: 400;
+      margin-bottom: 0.4rem;
     } 
+  }
+  .MuiFormControl-root {
+    .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
+      border-radius: 0;
+      background-color: rgb(103, 103, 103);
+      margin-top: 1rem;
+      .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+        padding: 0.8rem 1rem;
+      }
+      &.Mui-focused, & .on {
+        background-color: white;
+      }
+    }
+  }
+  .MuiButtonBase-root.css-10d1a0h-MuiButtonBase-root {
+    font-weight: 200;
+    .MuiTouchRipple-root {
+      border: 1px solid white;
+    }
   }
 }
 

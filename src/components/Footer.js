@@ -7,7 +7,7 @@ function Footer(props) {
   return (
     <>
     {
-      location.pathname !== "/" ?
+      location.pathname !== "/" && location.pathname !== "/contact/me" ?
       <section id="footer" className="">
 
       </section> : null

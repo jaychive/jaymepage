@@ -15,7 +15,7 @@ function Contact(props) {
               <h4 className="text-lg lexend font-normal mb-3">E-mail</h4>
               <p className="text-base lexend text-slate-600">shuga6@naver.com</p>
               <h4 className="text-lg lexend font-normal mt-5 mb-3">Phone</h4>
-              <p className="text-base lexend text-slate-600">010-8906-8760</p>
+              <p className="text-base pretendard text-slate-600">하단 폼으로 문의 부탁드립니다.</p>
             </div>
             <img src="/img/sub/sub03.svg" alt="" className="d-block mx-auto w-3 py-5" />
             <div className="social">

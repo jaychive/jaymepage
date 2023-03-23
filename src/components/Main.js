@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Main(props) {
   return (
     <>
-      <section id="main" className="position-relative ">
+      <section id="main" className="position-relative container">
         <div className="mainMenu pt-2">
           <Link to="/about"><p className="lexend font-light">&lt;ABOUT /&gt;</p></Link>
           <img className="d-block w-4 mx-auto py-3" src="/img/sub/sub02.svg" alt="" />

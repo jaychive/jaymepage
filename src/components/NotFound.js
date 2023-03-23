@@ -4,7 +4,7 @@ function NotFound(props) {
   return (
     <>
       <Link to="*">
-        <section id="">
+        <section id="container">
           404 Error
         </section>
       </Link>

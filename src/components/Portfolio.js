@@ -37,7 +37,7 @@ function Portfolio(props) {
   ]
   return (
     <>
-      <section id="portfolio" className="">
+      <section id="portfolio" className="container">
         <h2 className="playfair font-medium italic text-4xl py-4 d-flex justify-content-start ps-2">PORTFOLIO</h2>
         <div className="folios">
           <Folio btn={btnInfo[0]} per={[10, 60, 30]} link={['/img/sub/stack1.png', '/img/sub/stack1.png', '/img/sub/stack1.png', '/img/sub/stack1.png', '/img/sub/stack1.png']} />

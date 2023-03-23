@@ -7,7 +7,7 @@ function Hobby(props) {
     <>
       <div className="hobbyline text-left">
         <button className={"w-100 py-2 border-t border-black " + props.border} onClick={() => { setIsActive(isActive => !isActive) }}>
-          <div className="d-flex justify-content-between align-items-center px-1">
+          <div className="d-flex justify-content-between align-items-center px-2">
             <strong className={"hobTitle " + props.cls}>{props.name}</strong>
             {isActive ? <TfiClose /> : <TfiArrowRight style={{transform : "rotate(-45deg)"}} />}
           </div>

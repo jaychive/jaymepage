@@ -22,3 +22,8 @@
 
 ### 20230319
 * Mui CheckBox reset 완료
+
+### 20230323
+* Mui Textfield RHF useController와 useState를 사용하여 각 컴포넌트의 value 렌더링 세팅 완료
+* Textfield의 input 태그 내 value에 값이 존재할 때 on 이라는 클래스를 추가하여 background-color를 white로 변경토록 함
+* submit 버튼 클릭 시 rules에 반할 경우, on 클래스 삭제
