@@ -27,7 +27,7 @@ section {
 }
 
 // 공통클래스
-.fullcontainer {
+.fullcontainer mx-auto px-4 {
   min-width: 320px;
 
   @media (min-width:32rem) {
@@ -172,7 +172,13 @@ section {
 
 }
 
-#interest {}
+#interest {
+  .mySwiper {
+    .swiper-wrapper {
+      
+    }
+  }
+}
 
 #portfolio {}
 
@@ -203,7 +209,9 @@ section {
 
 #form {
   color: white;
+  background-color: #000;
   .MuiFormGroup-root {
+    flex-flow: row wrap;
     .MuiFormControlLabel-root {
       margin: 0 0.3rem;
     }
@@ -219,11 +227,11 @@ section {
     } 
   }
   .MuiFormControl-root {
-    .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
+    .css-1v4ccyo{
       border-radius: 0;
       background-color: rgb(103, 103, 103);
       margin-top: 1rem;
-      .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+      .css-1x5jdmq {
         padding: 0.8rem 1rem;
       }
       &.Mui-focused, & .on {
@@ -231,8 +239,14 @@ section {
       }
     }
   }
-  .MuiButtonBase-root.css-10d1a0h-MuiButtonBase-root {
+  .MuiButtonBase-root.css-1b47e06 {
     font-weight: 200;
+    padding: 0.75rem 1rem;
+    margin-top: 0.5rem;
+    &:hover {
+      background-color: white;
+      color: #000;
+    }
     .MuiTouchRipple-root {
       border: 1px solid white;
     }
